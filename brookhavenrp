@@ -1,0 +1,12 @@
+--Very easy and basic brookhaven script which allows us to change the speed of everything except cars.    
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Brookhaven", "BloodTheme")
+
+    -- MAIN
+    local Main = Window:NewTab("Speed")
+    local MainSection = Main:NewSection("Speed")
+
+    MainSection:NewSlider("Speed", "Changes the speed for everything except cars", 10000, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
